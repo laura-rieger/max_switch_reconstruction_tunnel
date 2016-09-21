@@ -1,0 +1,23 @@
+# from MNIST
+# The train/test net protocol buffer definition
+net: "proto2/net8_8_8.prototxt"
+
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.01
+# weight_decay: 1e-6
+weight_decay: 0
+
+# snapshot intermediate results
+snapshot: 1000
+snapshot_prefix: "snapshots2/net8_8_8"
+# solver mode: CPU or GPU
+solver_mode: GPU
+
+solver_type: ADAGRAD
+
+# The learning rate policy
+lr_policy: "fixed"
+# Display every 200 iterations
+display: 5
+# The maximum number of iterations
+max_iter: 50000
